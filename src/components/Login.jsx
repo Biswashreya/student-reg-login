@@ -12,14 +12,13 @@ const Login = ({ onTogglePage }) => {
     setError('');
     setSuccess('');
 
-    // --- Form Validation ---
+    // Form Validation 
     if (!email || !password) {
       setError('Please fill in all fields.');
       return;
     }
     
-    // In a real application, you would make an API call here to authenticate the user.
-    // For this example, we'll just simulate a successful login.
+    // We would make an API call here to authenticate the user
     console.log('Login attempt with:', { email, password });
     setSuccess('Login successful! Redirecting...');
     

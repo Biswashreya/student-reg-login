@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
-      {/* Conditionally render the Login or Register component based on state */}
+      {/* It will check the condition to render the Login or Register component based on state */}
       {currentPage === 'login' ? (
         <Login onTogglePage={togglePage} />
       ) : (

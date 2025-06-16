@@ -24,7 +24,7 @@ const Register = ({ onTogglePage }) => {
     setError('');
     setSuccess('');
 
-    // --- Form Validation ---
+    // Form Validation 
     const { firstName, lastName, email, password, confirmPassword, gender, age } = formData;
     if (!firstName || !lastName || !email || !password || !confirmPassword || !gender || !age) {
         setError('Please fill out all fields.');
@@ -43,8 +43,7 @@ const Register = ({ onTogglePage }) => {
         return;
     }
 
-    // In a real-world application, you would make an API call to your backend here
-    // to register the new user with the formData.
+    // We will make an API call to the backend here to register the new user
     console.log('Registering user with:', formData);
     setSuccess('Registration successful! You can now log in.');
 
