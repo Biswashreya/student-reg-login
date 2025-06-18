@@ -1,4 +1,3 @@
-// src/components/Register.jsx
 import React, { useState } from 'react';
 
 const Register = ({ onTogglePage }) => {
@@ -24,7 +23,7 @@ const Register = ({ onTogglePage }) => {
     setError('');
     setSuccess('');
 
-    // Form Validation 
+     
     const { firstName, lastName, email, password, confirmPassword, gender, age } = formData;
     if (!firstName || !lastName || !email || !password || !confirmPassword || !gender || !age) {
         setError('Please fill out all fields.');
@@ -43,11 +42,11 @@ const Register = ({ onTogglePage }) => {
         return;
     }
 
-    // We will make an API call to the backend here to register the new user
+    
     console.log('Registering user with:', formData);
     setSuccess('Registration successful! You can now log in.');
 
-    // Clear form after successful registration
+    
     setFormData({
         firstName: '', lastName: '', email: '', password: '', confirmPassword: '', gender: '', age: ''
     });

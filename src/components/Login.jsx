@@ -1,4 +1,3 @@
-// src/components/Login.jsx
 import React, { useState } from 'react';
 
 const Login = ({ onTogglePage }) => {
@@ -12,17 +11,17 @@ const Login = ({ onTogglePage }) => {
     setError('');
     setSuccess('');
 
-    // Form Validation 
+     
     if (!email || !password) {
       setError('Please fill in all fields.');
       return;
     }
     
-    // We would make an API call here to authenticate the user
+    
     console.log('Login attempt with:', { email, password });
     setSuccess('Login successful! Redirecting...');
     
-    // Clear form fields
+    
     setEmail('');
     setPassword('');
   };
