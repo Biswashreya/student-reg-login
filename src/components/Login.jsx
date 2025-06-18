@@ -15,8 +15,6 @@ const Login = ({ onTogglePage, onLoginSuccess }) => {
     }
     
     console.log('Login attempt with:', { email, password });
-
-    // On successful login, call the function from the parent (App.jsx)
     onLoginSuccess(); 
   };
 
