@@ -13,6 +13,18 @@ const Login = ({ onTogglePage, onLoginSuccess }) => {
       setError('Please fill in all fields.');
       return;
     }
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  
+    const matchedUser = users.find((user) => {
+    return user.email === email && user.password === password;
+});
+
+    if (!matchedUser) {
+    setError("Invalid email or password.");
+    return;
+  }
     
     console.log('Login attempt with:', { email, password });
     onLoginSuccess(); 

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 const Register = ({ onTogglePage }) => {
@@ -21,9 +22,16 @@ const Register = ({ onTogglePage }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setError('');
+
+
+  const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+  existingUsers.push(formData);
+  localStorage.setItem("users", JSON.stringify(existingUsers));
+
+
     setSuccess('');
 
-     
+    
     const { firstName, lastName, email, password, confirmPassword, gender, age } = formData;
     if (!firstName || !lastName || !email || !password || !confirmPassword || !gender || !age) {
         setError('Please fill out all fields.');
